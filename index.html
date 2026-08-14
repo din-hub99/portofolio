@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Gwen Adriano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#About" class="logo">Gwen Adriano</a>
+        <button class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+        <nav>
+            <ul class="Nav-links">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skill">Skill</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#project">Project</a></li>
+            </ul>
+        </nav>
+        <button id="theme_toggle" class="btn-toggle">
+            <i class="fas fa-moon" id="theme-icon"></i> <span id="theme-text">Mode Gelap</span>
+        </button>
+    </header>
+
+    <section class="hero" id="About">
+        <div class="heroc">
+            <img src="gwen.png" alt="Foto Profil Gwen Adriano" class="profile-pic"> 
+            <h1>Halo Saya <span class="higlight">Gwen Adriano</span></h1>
+            <h2>Junior Web Developer & student at RPL</h2>
+            <p>Berfokus pada pengembangan aplikasi web modern berbasis PHP/Laravel</p>
+        </div>
+        <div class="hero-action">
+            <a href="https://github.com/badakgorweng-sudo" target="_blank" class="btn secondary-btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#kontak" class="btn primary-btn">
+                <i class="fas fa-envelope"></i> Hubungi Saya
+            </a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Saya adalah seorang web developer junior yang tertarik dengan desain antarmuka, pemrograman web, dan pengembangan aplikasi yang dapat membantu user dengan solusi sederhana namun efektif.</p>
+    </section>
+
+    <section class="keahlian" id="Skill">
+        <h2>Skill</h2>
+        <div class="skillc">
+            <div class="skill-b"><i class="fab fa-html5"></i> HTML & CSS</div>
+            <div class="skill-b"><i class="fas fa-pencil-ruler"></i> UI/UX</div>
+            <div class="skill-b"><i class="fab fa-github"></i> GITHUB</div>
+            <div class="skill-b"><i class="fab fa-php"></i> PHP</div>
+            <div class="skill-b"><i class="fas fa-database"></i> MYSQL</div>
+            <div class="skill-b"><i class="fab fa-laravel"></i> LARAVEL</div>
+        </div>
+    </section>
+    
+    <section class="project" id="project">
+        <h2>Project</h2>
+        <div class="project-grid">
+            <a href="https://github.com/badakgorweng-sudo" target="_blank" rel="noopener" class="project-card">
+                <i class="fab fa-laravel"></i>
+                <h3>Ecomers</h3>
+                <p>Website ecomers pribadi saya yang menampilkan produk dan layanan.</p>
+            </a>
+            <a href="https://github.com/badakgorweng-sudo" target="_blank" rel="noopener" class="project-card">
+                <i class="fas fa-code"></i>
+                <h3>Coming Soon</h3>
+                <p></p>
+            </a>
+        </div>
+    </section>
+
+    <section class="kontak" id="kontak">
+        <h2>Hubungi Saya</h2>
+        <p class="subtitle">Punya pertanyaan atau ingin bekerja sama? Silahkan kirim pesan melalui formulir di bawah ini.</p>
+
+        <form class="kontakc">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap <span class="required">*</span></label>
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" placeholder="Masukan nama Anda" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <div class="input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="email@gmail.com" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subjek</label>
+                <div class="input-icon">
+                    <i class="fas fa-tag"></i>
+                    <input type="text" id="subject" placeholder="Judul pesan Anda">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Pesan <span class="required">*</span></label>
+                <div class="input-icon">
+                    <i class="fas fa-comment"></i>
+                    <textarea id="message" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree" style="margin-bottom: 0; font-weight: 400; font-size: 0.9rem;">
+                        Saya setuju dengan kebijakan privasi dan menyetujui data saya disimpan
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gwen Adriano</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme_toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        const body = document.body;
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.Nav-links');
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = 'Mode Gelap';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Mode Terang';
+            }
+        });
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.textContent = isOpen ? '✕' : '☰';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.textContent = '☰';
+            });
+        });
+    </script>
+</body>
+</html>
